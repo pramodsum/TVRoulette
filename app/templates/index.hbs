@@ -1,18 +1,18 @@
-<div class="jumbotron">
-  <center><h2>TV Roulette</h2></center>
-</div>
+{{render 'header'}}
 
 <div class="container">
   <div class="row">
-  
+
     {{#each}}
     {{!-- <div class="panel panel-default">
       <div class="panel-heading"> --}}
-        <center><h5>
-          <strong>{{unbound name}} S{{unbound season}}E{{unbound episode}}</strong>
-          <br>
-          <small>{{unbound title}}</small>
-        </h5></center>
+        <center>
+          <h5>
+            <strong>{{unbound name}} S{{unbound season}}E{{unbound episode}}</strong>
+            <br>
+            <small>{{unbound title}}</small>
+          </h5>
+        </center>
       {{!-- </div>
       <div class="panel-body"> --}}
         <div class="embed-responsive embed-responsive-16by9">
