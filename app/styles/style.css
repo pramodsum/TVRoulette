@@ -5,7 +5,8 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 200;
-    margin: 50px 0;
+    margin: 0;
+    margin-bottom: 50px;
     padding: 0;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -15,9 +16,32 @@ body {
 }
 
 .container {
+    padding: 0 50px;
     margin-top: 5%;
 }
 
 .ion-heart {
     color: pink;
+}
+
+.panel h5 {
+    margin-bottom: 0px;
+}
+
+.panel-default {
+    border-color: #33C3F0;
+}
+
+.jumbotron {
+    background: #EB5777;
+    color: white;
+    padding: 40px;
+}
+
+.container .jumbotron {
+    border-radius: 5px;
+}
+
+.jumbotron h2 {
+    margin-bottom: 0px;
 }

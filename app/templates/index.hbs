@@ -1,15 +1,26 @@
+<div class="jumbotron">
+  <center><h2>TV Roulette</h2></center>
+</div>
+
 <div class="container">
   <div class="row">
-    <center><h1>TV Roulette</h1></center>
-
+  
     {{#each}}
-      <h5>
-        {{name}} Season {{season}} Episode {{episode}}
-        <br>
-        <small>{{title}}</small>
-      </h5>
-      
-      <iframe src="{{unbound url}}" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="540" height="330"></iframe>
+    {{!-- <div class="panel panel-default">
+      <div class="panel-heading"> --}}
+        <center><h5>
+          <strong>{{unbound name}} S{{unbound season}}E{{unbound episode}}</strong>
+          <br>
+          <small>{{unbound title}}</small>
+        </h5></center>
+      {{!-- </div>
+      <div class="panel-body"> --}}
+        <div class="embed-responsive embed-responsive-16by9">
+          <center><iframe class="embed-responsive-item" src="{{unbound url}}" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="470" height="336"></iframe></center>
+        </div>
+      {{!-- </div>
+    </div> --}}
+    <br>
     {{/each}}
 
     <button class="button" {{action "randomEpisode"}}>Next Episode</button>
@@ -18,6 +29,6 @@
   <div class="row">
     {{render 'episode/new'}}
   </div>
-
-  {{render 'footer'}}
 </div>
+
+{{render 'footer'}}
