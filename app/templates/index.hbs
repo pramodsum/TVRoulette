@@ -3,23 +3,19 @@
     <center><h1>TV Roulette</h1></center>
 
     {{#each}}
-    <h4>{{name}}</h4>
-    <iframe src="{{url}}
-" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="540" height="330"></iframe>
+      <h5>
+        {{name}} Season {{season}} Episode {{episode}}
+        <br>
+        <small>{{title}}</small>
+      </h5>
+      
+      <iframe src="{{unbound url}}" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="540" height="330"></iframe>
     {{/each}}
-    <button class="button">Next Episode</button>
-    {{#each}}
-    <div {{bind-attr class=":episode selected"}} {{action 'selectEpisode' this}}>
-      <span class="name">{{name}}</span>
-      <span class="score">{{score}}</span>
-    </div>
-  {{/each}}
+
+    <button class="button" {{action "randomEpisode"}}>Next Episode</button>
   </div>
 
-  <div class="details">
-    {{#if selectedEpisode}}
-    {{render 'episode/edit' selectedEpisode}}
-    {{/if}}
+  <div class="row">
     {{render 'episode/new'}}
   </div>
 
