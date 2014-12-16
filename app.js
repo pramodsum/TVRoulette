@@ -47,7 +47,7 @@ var csrfExclude = ['/url1', '/url2'];
  * Express configuration.
  */
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 2000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(compress());
