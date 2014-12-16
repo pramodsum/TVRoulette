@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .row
+    center
+      ul.list-inline
+        - each show in shows
+          li
+            a(href="#{show.url}") 
+              img.show-img(src="#{show.img}" alt="#{show.name}")

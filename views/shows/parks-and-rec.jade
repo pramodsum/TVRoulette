@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .show
+    .banner(style="background: #{color}").text-center
+      a(href="#{pageURL}")
+          img(src="#{banner}")
+
+    .container
+      center
+        a.button(href="#{pageURL}") Next
+        
+        h5 #{name}
+          br 
+          small S#{season}E#{episode}
+
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src="#{url}")
