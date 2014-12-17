@@ -1,6 +1,7 @@
 var fs = require('fs');
 var parks = require('./episodes/parks.json');
 var psych = require('./episodes/psych.json');
+var community = require('./episodes/community.json');
 
 
 /**
@@ -9,7 +10,6 @@ var psych = require('./episodes/psych.json');
  */
 
 exports.getParks = function(req, res) {
-  // var parks = JSON.parse(fs.readFileSync('parks.json', 'utf8'));
   var j = Math.floor(Math.random()*parks.episodes.length);
   var episode = parks.episodes[j];
   res.render('shows/parks-and-rec', {
@@ -31,7 +31,6 @@ exports.getParks = function(req, res) {
  */
 
 exports.getPsych = function(req, res) {
-  // var parks = JSON.parse(fs.readFileSync('parks.json', 'utf8'));
   var j = Math.floor(Math.random()*psych.episodes.length);
   var episode = psych.episodes[j];
   res.render('shows/psych', {
@@ -39,6 +38,28 @@ exports.getPsych = function(req, res) {
     pageURL: './psych',
     color: psych.color,
     banner: psych.banner,
+    season: episode.season,
+    episode: episode.episode,
+    url: episode.url,
+    name: episode.title
+  });
+};
+
+
+
+/**
+ * GET /
+ * Community
+ */
+
+exports.getCommunity = function(req, res) {
+  var j = Math.floor(Math.random()*community.episodes.length);
+  var episode = community.episodes[j];
+  res.render('shows/community', {
+    title: 'Community',
+    pageURL: './community',
+    color: community.color,
+    banner: community.banner,
     season: episode.season,
     episode: episode.episode,
     url: episode.url,

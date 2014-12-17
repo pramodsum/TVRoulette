@@ -96,6 +96,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 app.get('/', homeController.index);
 app.get('/shows/parks-and-rec', showsController.getParks);
 app.get('/shows/psych', showsController.getPsych);
+app.get('/shows/community', showsController.getCommunity);
 
 /**
  * 500 Error Handler.

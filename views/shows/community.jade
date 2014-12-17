@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .show
+    .banner(style="background: #{color}").text-center
+      a(href="#{pageURL}")
+          img(src="#{banner}")
+
+    div(style="margin: 0 50px;")
+      .alert.alert-info.fade.in
+        button.close(type='button', data-dismiss='alert')
+          span.ion-close-circled
+        div This page is currently under construction! Video links will not be available for a while.
+    .container
+      center
+        a.button(href="#{pageURL}") Next
+        
+        h5 #{name}
+          br 
+          small S#{season}E#{episode}
+
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src="#{url}")
