@@ -6,6 +6,11 @@ block content
       a(href="#{pageURL}")
           img(src="#{banner}")
 
+    div(style="margin: 0 50px;")
+      .alert.alert-warning.fade.in
+        button.close(type='button', data-dismiss='alert')
+          span.ion-close-circled
+        div This page is currently under construction! Video links will not be available for a while.
     .container
       center
         a.button(href="#{pageURL}") Next
