@@ -4,7 +4,7 @@
  */
 
 var shows = [
-  {name: 'Psych', url: '`/shows/psych', img: 'http://4.bp.blogspot.com/-MJxqn9xUQ9M/Utb7f95aLFI/AAAAAAAAAC4/Ohnqui3-AtA/s1600/Psych.jpg'}, 
+  {name: 'Psych', url: '/shows/psych', img: 'http://4.bp.blogspot.com/-MJxqn9xUQ9M/Utb7f95aLFI/AAAAAAAAAC4/Ohnqui3-AtA/s1600/Psych.jpg'}, 
   // {name: 'Chuck', url: '`/shows/chuck', img: 'http://i.kinja-img.com/gawker-media/image/upload/s--HT-g0XuV--/18wbuapxiddowjpg.jpg'}, 
   {name: 'Parks & Recreation', url: '/shows/parks-and-rec', img: 'http://www.nbc.com/sites/nbcunbc/files/files/2013_0808_Parks_and_Rec_Show_KeyArt_1920x1080_0.jpg', img: 'http://www.nbc.com/sites/nbcunbc/files/files/2013_0808_Parks_and_Rec_Show_KeyArt_1920x1080_0.jpg'} 
   // {name: '30 Rock', url: '/shows/30Rock', img: 'http://prothro.files.wordpress.com/2009/10/key_art_30_rock.jpg'}, 

@@ -33,12 +33,12 @@ exports.getParks = function(req, res) {
 exports.getPsych = function(req, res) {
   // var parks = JSON.parse(fs.readFileSync('parks.json', 'utf8'));
   var j = Math.floor(Math.random()*psych.episodes.length);
-  var episode = parks.episodes[j];
+  var episode = psych.episodes[j];
   res.render('shows/psych', {
     title: 'Psych',
     pageURL: './psych',
-    color: parks.color,
-    banner: parks.banner,
+    color: psych.color,
+    banner: psych.banner,
     season: episode.season,
     episode: episode.episode,
     url: episode.url,
